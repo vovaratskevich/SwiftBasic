@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Topics">
+      <Group
+         location = "container:"
+         name = "Collection Types">
+         <FileRef
+            location = "group:CollectionTypes .playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "String and Characters">
+         <FileRef
+            location = "group:StringAndCharacters.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Basic Operators">
+         <FileRef
+            location = "group:BasicOperators.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "The Basic">
+         <FileRef
+            location = "group:Basic.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Protocols">
+         <FileRef
+            location = "group:habrProtocols.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Generics">
+         <FileRef
+            location = "group:genericsFromTuor.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Error Handling">
+         <FileRef
+            location = "group:fromTuor.playground">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
