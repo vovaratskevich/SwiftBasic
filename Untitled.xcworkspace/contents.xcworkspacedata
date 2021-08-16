@@ -6,6 +6,76 @@
       name = "Topics">
       <Group
          location = "container:"
+         name = "Initialization ">
+         <FileRef
+            location = "group:Initialization.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Inheritance">
+         <FileRef
+            location = "group:Inheritance.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Subscripts">
+         <FileRef
+            location = "group:Subscripts.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Methods">
+         <FileRef
+            location = "group:Methods.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Properties ">
+         <FileRef
+            location = "group:Properties .playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Structures and Classes ">
+         <FileRef
+            location = "group:StructAndClasses.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Enum">
+         <FileRef
+            location = "group:Enum.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Closures">
+         <FileRef
+            location = "group:Closures.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Functions">
+         <FileRef
+            location = "group:Functions.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Control Flow">
+         <FileRef
+            location = "group:ControlFlow.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Collection Types">
          <FileRef
             location = "group:CollectionTypes .playground">
@@ -53,5 +123,26 @@
             location = "group:fromTuor.playground">
          </FileRef>
       </Group>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Questions ">
+      <Group
+         location = "container:"
+         name = "Closures">
+         <FileRef
+            location = "group:ClosuresQuestion.playground">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
+      name = "OwnTasks">
+      <FileRef
+         location = "group:CopyOnWrite.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Multithreading.playground">
+      </FileRef>
    </Group>
 </Workspace>

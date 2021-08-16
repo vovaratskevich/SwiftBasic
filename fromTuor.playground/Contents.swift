@@ -35,6 +35,7 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 try send(job: 11, toPrinter: "Never Has Tone")
 
 func zeroDevide(a: Double, b: Double) throws -> Double {
+    print(#function)
     guard b != 0 else {
         throw NSError(domain: "Err", code: 404)
     }
@@ -98,3 +99,5 @@ func fridgeCon(_ food: String) -> Bool {
 
 fridgeCon("cherry")
 print(fridgeIsOpen)
+
+let newArr: NSArray
