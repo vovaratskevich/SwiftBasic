@@ -6,6 +6,20 @@
       name = "Topics">
       <Group
          location = "container:"
+         name = "Cuncurrency">
+         <FileRef
+            location = "group:Concurrency.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Optional Chaining">
+         <FileRef
+            location = "group:OptionalChaining.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Initialization ">
          <FileRef
             location = "group:Initialization.playground">
@@ -121,6 +135,9 @@
          name = "Error Handling">
          <FileRef
             location = "group:fromTuor.playground">
+         </FileRef>
+         <FileRef
+            location = "group:ErrorHandling.playground">
          </FileRef>
       </Group>
    </Group>

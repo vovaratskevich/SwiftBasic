@@ -358,3 +358,161 @@ func playMonopoly() {
 }
 
 playMonopoly()
+
+class Person {
+    var name = String()
+    
+    init(name: String) {
+        self.name = name
+        //print("\(name) init and add to memory")
+    }
+    
+    deinit {
+        //print("\(name) remove from memory")
+    }
+}
+
+var ref1: Person?
+var ref2: Person?
+var ref3: Person?
+
+ref1 = Person(name: "Joe")
+
+ref2 = ref1
+ref3 = ref1
+
+ref1 = nil
+ref2 = nil
+ref3 = nil
+
+
+//____weak____
+
+class Hotel {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var aparts: Aparts?
+    
+    deinit {
+       // print("\(name) are move out")
+    }
+}
+
+class Aparts {
+    
+    let room: String
+    
+    init(room: String) {
+        self.room = room
+    }
+    
+    weak var hotel: Hotel?
+    
+    deinit {
+       // print("Aparts \(room) are vacated")
+    }
+}
+
+var objHotel: Hotel?
+var objAparts: Aparts?
+
+objHotel = Hotel(name: "Jon Smith")
+objAparts = Aparts(room: "115")
+
+objHotel!.aparts = objAparts
+objAparts!.hotel = objHotel
+
+objHotel = nil
+objAparts = nil
+
+//_____unowned_____
+
+class Country {
+    let name: String
+    var capitalCity: City!
+    init(name: String, capitalName: String) {
+        self.name = name
+        self.capitalCity = City(name: capitalName, country: self)
+    }
+}
+
+class City {
+    let name: String
+
+    unowned let country: Country
+    
+    init(name: String, country: Country) {
+        self.name = name
+        self.country = country
+    }
+}
+
+var country = Country(name: "Russia", capitalName: "Moscow")
+
+class Car {
+    var driver: Man?
+    
+    deinit {
+      //  print("car was removed")
+    }
+}
+class Man {
+    weak var myCar: Car?
+    
+    deinit {
+      //  print("man was removed")
+    }
+}
+
+var car: Car? = Car()
+var man: Man? = Man()
+
+car?.driver = man
+man?.myCar = car
+
+car = nil
+man = nil
+
+class NewMan {
+    var passport: Passport?
+    
+    deinit {
+        print("man was removed from memory")
+    }
+    
+}
+
+class Passport {
+    unowned let man: NewMan
+    
+    init(man: NewMan) {
+        self.man = man
+    }
+    
+    deinit {
+        print("passport was removed from memory")
+    }
+}
+
+var newMan: NewMan? = NewMan()
+var passport: Passport? = Passport(man: newMan!)
+newMan?.passport = passport
+passport = nil
+newMan = nil
+
+
+
+
+
+
+
+
+
+
+
+
+
