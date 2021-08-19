@@ -172,3 +172,4 @@ func fetchImage1() {
     }
     task.resume()
 }
+fetchImage1()

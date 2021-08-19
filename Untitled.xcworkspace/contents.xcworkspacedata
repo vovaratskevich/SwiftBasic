@@ -22,6 +22,24 @@
          <FileRef
             location = "group:GCD.playground">
          </FileRef>
+         <FileRef
+            location = "group:GroupTasks.playground">
+         </FileRef>
+         <FileRef
+            location = "group:ThreadSafe.playground">
+         </FileRef>
+         <FileRef
+            location = "group:Operations.playground">
+         </FileRef>
+         <FileRef
+            location = "group:DispatchWorkItem.playground">
+         </FileRef>
+         <FileRef
+            location = "group:DispatchSemaphores.playground">
+         </FileRef>
+         <FileRef
+            location = "group:DispatchGroup .playground">
+         </FileRef>
       </Group>
       <Group
          location = "container:"
