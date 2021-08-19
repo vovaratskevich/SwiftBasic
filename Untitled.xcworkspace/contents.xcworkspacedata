@@ -8,7 +8,19 @@
          location = "container:"
          name = "Cuncurrency">
          <FileRef
+            location = "group:../../Downloads/GCD-Swift3-master/EnvironmentPlayground.playground">
+         </FileRef>
+         <FileRef
             location = "group:Concurrency.playground">
+         </FileRef>
+         <FileRef
+            location = "group:NSCondition .playground">
+         </FileRef>
+         <FileRef
+            location = "group:RWLock.playground">
+         </FileRef>
+         <FileRef
+            location = "group:GCD.playground">
          </FileRef>
       </Group>
       <Group

@@ -51,11 +51,7 @@ class NewViewController: UIViewController {
         self.title = "vc 2"
         view.backgroundColor = UIColor.white
         loadFoto()
-            
-//            let imageURL: URL = URL(string: "https://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg")!
-//            if let data = try? Data(contentsOf: imageURL) {
-//                self.image.image = UIImage(data: data)
-//            }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

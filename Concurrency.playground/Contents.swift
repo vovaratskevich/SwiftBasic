@@ -266,3 +266,109 @@ class DeadLock {
 let deadLock = DeadLock()
 //deadLock.test()
 //print("hey")
+
+let nsThread = Thread {
+    print("test")
+    print(qos_class_self())
+}
+nsThread.qualityOfService = .userInteractive
+nsThread.start()
+
+print(qos_class_main())
+
+class SaveThread {
+    private var mutex = pthread_mutex_t()
+    
+    init() {
+        pthread_mutex_init(&mutex, nil)
+    }
+    
+    func someMethod(complition: () -> ()) {
+        pthread_mutex_lock(&mutex)
+        complition()
+        defer {
+            pthread_mutex_unlock(&mutex)
+        }
+    }
+}
+var arr = [String]()
+let saveThread = SaveThread()
+
+saveThread.someMethod {
+    print("test")
+    arr.append("1 thread")
+}
+arr.append("2 thread")
+
+class NewTread {
+    private let lockMutex = NSLock()
+    
+    func someMethod(complition: () -> ()) {
+        lockMutex.lock()
+        complition()
+        defer {
+            lockMutex.unlock()
+        }
+    }
+}
+let lockThread = NewTread()
+lockThread.someMethod {
+    print("lockThread")
+    arr.append("3 thread")
+}
+
+class RecursiveMutexTest {
+    private var mutex = pthread_mutex_t()
+    private var attribute = pthread_mutexattr_t()
+    
+    init() {
+        pthread_mutexattr_init(&attribute)
+        pthread_mutexattr_settype(&attribute, PTHREAD_MUTEX_RECURSIVE)
+        pthread_mutex_init(&mutex, &attribute)
+    }
+    
+    func test1() {
+        pthread_mutex_lock(&mutex)
+        test2()
+        defer {
+            pthread_mutex_unlock(&mutex)
+        }
+    }
+    private func test2() {
+        pthread_mutex_lock(&mutex)
+        print("recursive")
+        defer {
+            pthread_mutex_unlock(&mutex)
+        }
+    }
+}
+
+let recursive = RecursiveMutexTest()
+recursive.test1()
+
+let recursiveLock1 = NSRecursiveLock()
+
+class RecursiveThread: Thread {
+    
+    override func main() {
+        recursiveLock1.lock()
+        print("thread acquired lock")
+        callMe()
+        defer {
+            recursiveLock1.unlock()
+        }
+        print("exit main")
+    }
+    
+    func callMe() {
+        recursiveLock.lock()
+        print("thread acquired lock")
+        defer {
+            recursiveLock1.unlock()
+        }
+        print("Exit callMe")
+    }
+}
+
+let recursiveThread = RecursiveThread()
+recursiveThread.start()
