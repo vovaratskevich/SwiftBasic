@@ -30,5 +30,16 @@ let arr = [1, 1, 1]
 arr.areAllElementsEq
 arr.elEq()
 
+class DataProvider<T>: Equatable {
+    static func == (lhs: DataProvider<T>, rhs: DataProvider<T>) -> Bool {
+        <#code#>
+    }
+    
+    func fetch() {
+        
+    }
+}
+
+
 
 

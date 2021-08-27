@@ -6,6 +6,34 @@
       name = "Topics">
       <Group
          location = "container:"
+         name = "OpaqueTypes">
+         <FileRef
+            location = "group:OpaqueTypes.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Extentions ">
+         <FileRef
+            location = "group:Extensions.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "NestedTypes">
+         <FileRef
+            location = "group:NestedTypes.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "TypeCasting">
+         <FileRef
+            location = "group:TypeCasting.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Cuncurrency">
          <FileRef
             location = "group:../../Downloads/GCD-Swift3-master/EnvironmentPlayground.playground">
@@ -39,6 +67,15 @@
          </FileRef>
          <FileRef
             location = "group:DispatchGroup .playground">
+         </FileRef>
+         <FileRef
+            location = "group:DispatchBarrier.playground">
+         </FileRef>
+         <FileRef
+            location = "group:OperationQueue.playground">
+         </FileRef>
+         <FileRef
+            location = "group:AsyncOperations.playground">
          </FileRef>
       </Group>
       <Group
@@ -158,6 +195,9 @@
          name = "Generics">
          <FileRef
             location = "group:genericsFromTuor.playground">
+         </FileRef>
+         <FileRef
+            location = "group:GenericsDock.playground">
          </FileRef>
       </Group>
       <Group
